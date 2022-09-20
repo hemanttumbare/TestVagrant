@@ -5,23 +5,26 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 public class Utilities {
 
-	public Properties loadPropertiesFile(String filePath) {
+	public JSONObject readJsonFile(String filePath) {
 
-		FileReader reader;
-		Properties prop = new Properties();
-
+		JSONParser parser = new JSONParser();
+		Object obj = null;
 		try {
-			reader = new FileReader(filePath);
-			prop.load(reader);
+			obj = parser.parse(new FileReader(filePath));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
 		}
-
-		return prop;
+		return (JSONObject) obj;
 
 	}
 
