@@ -16,6 +16,6 @@ Given Assignment is automated with Technolgies as Java, TestNG and Maven.
 **Assignment Overview:**
 1. Given Json file is stored in src/test/resources/TestDataFiles/  
 2. Utility class com.testvagrant.utility.Utilities.jave is used to read this json with json-simple libraries. 
-3. Constants and DataProvider classes are used to provide constants and data required for test cases ( com.testvagrant.constants.Constants.java and com.testvagrant.dataProviders.TestDataProvider.java )
-4. Data Provider gives input to test as for which team and which data file to to used.
-5. Tests are configured such that we can add json data files for multiple teams and run same test cases for all those. (com.testvagrant.VerifyTeamCombinationTests.java)
+3. Constants (com.testvagrant.constants.Constants.java) and DataProvider class (com.testvagrant.dataProviders.TestDataProvider.java) are used to provide constants and data required for test cases. 
+5. Data Provider gives input to test as for which team and which data file to to used.
+6. Tests are configured such that we can add json data files for multiple teams in data provider and run same test cases for all those. (com.testvagrant.VerifyTeamCombinationTests.java)
